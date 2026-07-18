@@ -7,6 +7,7 @@ export const getFaviconRequestSchema = {
         url: { type: "string" },
         grabImage: { type: "boolean" },
         fast: { type: "boolean" },
+        preferVector: { type: "boolean" },
       },
     },
   },

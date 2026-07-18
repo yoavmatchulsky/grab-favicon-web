@@ -5,6 +5,7 @@ export class FaviconProvider {
     return await getFavicon(url, {
       grabImage: !!options.grabImage,
       fast: !!options.fast,
+      preferVector: !!options.preferVector,
     });
   }
 }
