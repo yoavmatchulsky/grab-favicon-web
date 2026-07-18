@@ -4,10 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>grab-favicon.com</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="./favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="./assets/icons/apple-touch-icon-512.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <meta name="theme-color" content="#9d174d" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
-    <h1>grab-favicon.com</h1>
-    <script src="/app.js"></script>
+    <h1>Grab Favicon</h1>
+    
+    <div class="form">
+      <form action="/api/favicon">
+        <fieldset class="form-input">
+          <input type="text" name="url" placeholder="Enter your url"/>
+          <button type="submit" disabled>Grab!</button>
+        </fieldset>
+        <fieldset class="form-options">
+          <label>
+            <input type="checkbox" name="fast" />
+            <span class="text">
+              Fast?
+              <span class="helper">Grabs the first image it finds</span>
+            </span>
+          </label>
+          <label>
+            <input type="checkbox" name="preferVector" />
+            <span class="text">
+              Prefer Vector?
+              <span class="helper">Grabs an SVG icon if found</span>
+            </span>
+          </label>
+        </fieldset>
+      </form>
+      
+      <div class="results"></div>
+    </div>
+
+    <footer>
+      <a href="https://yoavi.codes" target="_blank">yoavi.codes</a>
+    </footer>
+
+    <script src="./app.js"></script>
   </body>
 </html>
